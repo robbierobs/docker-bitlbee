@@ -3,7 +3,8 @@ version: "2.0"
 services:
   bitlbee:
     build: .
-    image: mbologna/docker-bitlbee
+    # image: mbologna/docker-bitlbee
+    image: irobbierobinson/docker-bitlbee
     container_name: bitlbee
     restart: always
     ports:
