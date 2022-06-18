@@ -12,6 +12,7 @@ curl -LO# https://get.bitlbee.org/src/bitlbee-$BITLBEE_VERSION.tar.gz
 curl -LO# https://github.com/EionRobb/skype4pidgin/archive/1.7.tar.gz
 curl -LO# https://github.com/bitlbee/bitlbee-facebook/archive/v1.2.1.tar.gz
 git clone https://github.com/EionRobb/purple-hangouts.git
+git clone https://github.com/EionRobb/pidgin-pushbullet.git
 git clone https://github.com/EionRobb/purple-googlechat.git
 git clone https://alexschroeder.ch/cgit/bitlbee-mastodon
 git clone https://github.com/EionRobb/purple-rocketchat.git
@@ -48,6 +49,12 @@ cd
 tar zxvf v1.2.1.tar.gz
 cd bitlbee-facebook-1.2.1
 ./autogen.sh
+make
+make install
+
+# pidgin-pushbullet
+cd
+cd pidgin-pushbullet
 make
 make install
 
@@ -140,6 +147,8 @@ rm -fr bitlbee-steam
 rm -fr purple-matrix
 rm -fr purple-mattermost
 rm -fr purple-instagram
+rm -fr purple-googlechat
+rm -fr pidgin-pushbullet
 
 # add user bitlbee
 adduser --system --home /var/lib/bitlbee --disabled-password --disabled-login --shell /usr/sbin/nologin bitlbee
